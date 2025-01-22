@@ -1,0 +1,67 @@
+.PatientCare_grid_container {
+    display: grid;
+    grid-template-areas:
+      'header header '
+      'main right';
+    gap: 10px;
+    background-color: rgb(219, 243, 243);
+    padding: 10px;
+    
+  }
+  .grid-container > div {
+    background-color: rgba(230, 212, 212, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+.PatientCare_inner_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+}
+  
+.PatientCare_Header{
+    margin-left: 38%;
+    margin-top: 3%;
+    
+    
+}
+.PatientCare_Text{
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 15%;
+}
+.Speciality_Text1{
+    margin-left: 35%;
+}
+.PatientCare_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.PatientCare_left{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 20px;
+}
+.PatientCare_main_img{
+    width: 70%;
+    border-radius: 5%;
+    margin-left: 15%;
+}
+.PatientCare_img{
+    width: 30%;
+}
+.PatientCare_btn{
+    height: 80%;
+    border-radius: 10%;
+    padding: 4%;
+
+}
+.PatientCare_btn:hover{
+    border-color: brown;
+}

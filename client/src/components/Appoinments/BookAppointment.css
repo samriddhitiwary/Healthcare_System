@@ -1,0 +1,329 @@
+.appointment-container {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 245, 1) 100%), 
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20fill%3D%22none%22%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%222%22%20fill%3D%22%23d1e3f8%22%20/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: repeat;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Roboto', sans-serif;
+}
+
+  /* Filter container styling for better spacing and alignment */
+  .filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual filter item styling */
+  .filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+  }
+  
+  /* Filter input and select box styling */
+  .filter-item input[type="text"], .filter-item select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus effect for input and select */
+  .filter-item input[type="text"]:focus, .filter-item select:focus {
+    border-color: #007bff;
+  }
+  
+  /* Doctor list styling */
+  .doctor-list {
+    margin-top: 20px;
+  }
+  
+  .doctor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Doctor card styling */
+  .doctor-card {
+    padding: 1%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: left;
+    background-image: linear-gradient(45deg, #f9f9f9, #ffffff);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .doctor-card:hover {
+    background-image: linear-gradient(45deg, #a2c2f1, #d0e3f1);
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+  
+  /* Doctor image styling */
+  .doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Appointment button styling */
+  .Patient-book-appointment-btn {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #007291, #07394a);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-left: auto;
+    align-self: center;
+  }
+  
+  .Patient-book-appointment-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #3388cc);
+    transform: scale(1.05);
+  }
+  
+  /* Doctor schedule section */
+  .doctor-schedule {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .doctor-availability {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .doctor-schedule h4 {
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .doctor-schedule ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .doctor-schedule li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .doctor-schedule li i {
+    margin-right: 8px;
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  /* Responsiveness for tablet screens */
+  @media (min-width: 768px) {
+    .doctor-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .doctor-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .filters-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 15px;
+    }
+  
+    .filter-item input[type="text"], .filter-item select {
+      width: 100%;
+    }
+  }
+  
+  /* Appointment form section styling */
+  .appointment-form {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .appointment-form input, .appointment-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .appointment-form input:focus, .appointment-form select:focus {
+    border-color: #b6d4f4;
+    outline: none;
+  }
+  
+  .appointment-form button {
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #97c2f1, #f2f3f4);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .appointment-form button:hover {
+    background: linear-gradient(45deg, #91c2f6, #f2f5f8);
+    transform: scale(1.05);
+  }
+  
+  /* Degree availability line styling */
+  .degree-availability-line {
+    height: 2px;
+    background: linear-gradient(to right, #0b131a, transparent 95%);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  /* Calendar container styling */
+  .calendar-container {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  
+  .book-appointment-button{
+    margin-left: 60%;
+    margin-top: -10%;
+  }
+
+  /* General container styling */
+.appointment-container {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title styling */
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Filters container with better spacing and alignment */
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* Individual filter item styling */
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+/* Label styling */
+.filter-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Select box styling */
+.filter-select {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f7fa;
+  transition: border-color 0.3s ease;
+}
+
+.filter-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Input field styling */
+.filter-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f7fa;
+  transition: border-color 0.3s ease;
+}
+
+.filter-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filters-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+

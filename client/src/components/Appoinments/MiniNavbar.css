@@ -1,0 +1,22 @@
+#navbars {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa; /* Light background */
+    padding: 10px 0;
+  }
+  
+  #navbar_div{
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+ #navbar_div:hover {
+    color: #007bff; /* Highlight on hover */
+  }
+  
+  .active-link {
+    border-bottom: 2px solid #007bff;
+  }
+  

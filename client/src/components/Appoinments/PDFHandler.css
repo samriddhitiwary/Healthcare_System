@@ -1,0 +1,92 @@
+.table-container {
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Arial", sans-serif;
+    color: #333;
+    text-align: center;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+  }
+  
+  .table th {
+    background: linear-gradient(45deg, #8ab1e3, #2136ae);
+    color: white;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #f4bcbc; /* Light pink for odd rows */
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #eaf4fc; /* Light blue for even rows */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #d0e7ff; /* Hover effect */
+    transition: background-color 0.3s ease;
+  }
+  
+  .table td button {
+    background: linear-gradient(45deg, #007291, #07394a);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table td button:hover {
+    background-color: #0056b3;
+  }
+  
+  .no-data {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .table-container {
+      padding: 10px;
+    }
+  
+    .table {
+      font-size: 14px;
+    }
+  
+    .table th,
+    .table td {
+      padding: 8px 10px;
+    }
+  
+    .table-container h2 {
+      font-size: 20px;
+    }
+  }
+  

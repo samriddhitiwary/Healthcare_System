@@ -1,0 +1,39 @@
+#navbar {
+    background-color: rgb(219, 243, 243);
+    padding: 10px 0;
+  }
+  
+  #navbar_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;  
+    width: 100%;
+  }
+  
+  .navbar_text {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .navbar_text:hover {
+    color: rgb(213, 15, 15);  
+    text-decoration: underline;
+    transform: scale(1.05);  
+  }
+  
+  
+  @media (max-width: 768px) {
+    #navbar_div {
+      flex-direction: column;  
+      gap: 20px; 
+    }
+  
+    .navbar_text {
+      font-size: 1.1rem; 
+    }
+  }
+  

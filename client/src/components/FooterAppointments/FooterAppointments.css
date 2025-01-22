@@ -1,0 +1,29 @@
+.FooterAppointmentsapp{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex-wrap: wrap;
+    
+}
+.FooterAppointmentsbut:hover{
+    box-shadow: 10px 10px 20px black;
+    background-color:rgb(54, 206, 206);
+}
+.FooterAppointmentsbut{
+    box-shadow: black;
+    margin-bottom: 5%;
+}
+.FooterAppointments_Header{
+    color: white;
+    font-weight: bold;
+    margin-left: 30%;
+}
+.FooterAppointments_body{
+    background-color: rgb(28, 128, 132);
+    height: 100%;
+
+}
+.FooterAppointments_img{
+    margin-bottom: 8%;
+}

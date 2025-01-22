@@ -1,0 +1,268 @@
+[
+  {
+      "name": "Butter Chicken",
+      "calories": 2.45,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.17,
+      "protein_g": 0.17,
+      "carbohydrates_total_g": 0.08,
+      "fiber_g": 0.01,
+      "sugar_g": 0.02,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/09/11/78/17/1000_F_911781732_nisgMzCKq0YJrFUwOK8SefQjZxWFfYdY.jpg"
+  },
+  {
+      "name": "Chole Bhature",
+      "calories": 2.6,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.1,
+      "protein_g": 0.05,
+      "carbohydrates_total_g": 0.36,
+      "fiber_g": 0.03,
+      "sugar_g": 0.02,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/05/53/98/37/1000_F_553983713_fPQArPANoKopj2Tm4621eYAA1SXy48qt.jpg"
+  },
+  {
+      "name": "Biryani",
+      "calories": 2.08,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.088,
+      "protein_g": 0.096,
+      "carbohydrates_total_g": 0.224,
+      "fiber_g": 0.018,
+      "sugar_g": 0.012,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/08/18/86/36/1000_F_818863608_LDNJk6k2zsXHObB1AxJwQXL6GkYOalZO.jpg"
+  },
+  {
+      "name": "Masoor Dal",
+      "calories": 1.33,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.047,
+      "protein_g": 0.08,
+      "carbohydrates_total_g": 0.17,
+      "fiber_g": 0.05,
+      "sugar_g": 0.02,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/09/14/17/11/1000_F_914171101_60Q0zwh2lWON16JjgNEujQiuBbdgIua1.jpg"
+  },
+  {
+      "name": "Samosa",
+      "calories": 1.5,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.092,
+      "protein_g": 0.035,
+      "carbohydrates_total_g": 0.155,
+      "fiber_g": 0.023,
+      "sugar_g": 0.012,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/04/19/99/91/1000_F_419999161_74rj3Z8AhdxFqJrnrbv6U85iqVOsDTdB.jpg"
+  },
+  {
+      "name": "Pani Puri",
+      "calories": 1.2,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.04,
+      "protein_g": 0.028,
+      "carbohydrates_total_g": 0.2,
+      "fiber_g": 0.02,
+      "sugar_g": 0.016,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/04/97/24/29/1000_F_497242936_C1fOxGvzlZ50Qp6djiFzKimAfbMj5VKY.jpg"
+  },
+  {
+      "name": "Aloo Paratha",
+      "calories": 2.33,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.12,
+      "protein_g": 0.04,
+      "carbohydrates_total_g": 0.253,
+      "fiber_g": 0.033,
+      "sugar_g": 0.02,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/09/45/46/72/1000_F_945467264_13rCx2nGR9wb9wrVt2g2FEFB4tE4b8sW.jpg"
+  },
+  {
+      "name": "Dosa",
+      "calories": 2,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.08,
+      "protein_g": 0.06,
+      "carbohydrates_total_g": 0.25,
+      "fiber_g": 0.03,
+      "sugar_g": 0.01,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/03/35/94/82/1000_F_335948277_DYZlCZBTboudqt2t271xB2RT5ES1HZnL.jpg"
+  },
+  
+  {
+      "name": "Palak Paneer",
+      "calories": 1.25,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.09,
+      "protein_g": 0.075,
+      "carbohydrates_total_g": 0.045,
+      "fiber_g": 0.013,
+      "sugar_g": 0.015,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/08/16/14/13/1000_F_816141351_xhxp5V3kd8sLrEgZdWAoCNRMDjZZuD2c.jpg"
+  },
+  {
+      "name": "Pav Bhaji",
+      "calories": 2.3,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.1,
+      "protein_g": 0.06,
+      "carbohydrates_total_g": 0.3,
+      "fiber_g": 0.02,
+      "sugar_g": 0.03,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/10/00/99/18/1000_F_1000991848_Cf46rnPKMKoa1tYayxKqbwh9EH7dkAuH.jpg"
+  },
+  {
+      "name": "Tandoori Chicken",
+      "calories": 2.5,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.14,
+      "protein_g": 0.21,
+      "carbohydrates_total_g": 0.03,
+      "fiber_g": 0.01,
+      "sugar_g": 0.01,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/09/12/19/26/1000_F_912192621_V04idAMffmzJJ3kyPzKIhNHvExq1g7WU.jpg"
+  },
+  {
+      "name": "Momos",
+      "calories": 1.8,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.06,
+      "protein_g": 0.08,
+      "carbohydrates_total_g": 0.24,
+      "fiber_g": 0.03,
+      "sugar_g": 0.01,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/09/10/34/27/1000_F_910342789_fhioDmlOWCghzHPCcmSOAQwd5qYcV5tL.jpg"
+  },
+  {
+      "name": "Kadhi Pakora",
+      "calories": 2.4,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.18,
+      "protein_g": 0.09,
+      "carbohydrates_total_g": 0.18,
+      "fiber_g": 0.04,
+      "sugar_g": 0.02,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/09/98/87/83/1000_F_998878381_b51iywJvBxtfE8vsOGZlPFS6pYk17yaD.jpg"
+  },
+
+  {
+      "name": "Chole Tikka",
+      "calories": 2.2,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.1,
+      "protein_g": 0.18,
+      "carbohydrates_total_g": 0.18,
+      "fiber_g": 0.03,
+      "sugar_g": 0.02,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/06/36/45/80/1000_F_636458011_VSCwuI7Y1kfKmZPjS9CkaEpjxGWaZw3I.jpg"
+  },
+  {
+      "name": "Gulab Jamun",
+      "calories": 2.7,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.14,
+      "protein_g": 0.06,
+      "carbohydrates_total_g": 0.35,
+      "fiber_g": 0.01,
+      "sugar_g": 0.25,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/09/11/75/67/1000_F_911756724_0DN1zjyWncX79AruKJkG3BlxppsczuOg.jpg"
+  },
+  {
+      "name": "Rogan Josh",
+      "calories": 2.9,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.2,
+      "protein_g": 0.25,
+      "carbohydrates_total_g": 0.1,
+      "fiber_g": 0.02,
+      "sugar_g": 0.04,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/09/07/01/82/1000_F_907018238_8prgXfn6NxZ1OChMW0i5Nsm0bpT4OI0G.jpg"
+  },
+  {
+      "name": "Pesarattu",
+      "calories": 2.1,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.09,
+      "protein_g": 0.1,
+      "carbohydrates_total_g": 0.3,
+      "fiber_g": 0.03,
+      "sugar_g": 0.02,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/09/24/54/23/1000_F_924542362_8kCjqLh0E24lfmY4OkAryCKJXLGF5CzS.jpg"
+  },
+  {
+      "name": "Vada Pav",
+      "calories": 2.5,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.12,
+      "protein_g": 0.08,
+      "carbohydrates_total_g": 0.32,
+      "fiber_g": 0.03,
+      "sugar_g": 0.02,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/09/44/03/00/1000_F_944030023_zUCU3EH7bQqZtJQian5pxqt95CpWScCk.jpg"
+  },
+  {
+      "name": "Roti",
+      "calories": 2.5,
+      "serving_size": "1 piece",
+      "fat_total_g": 0.06,
+      "protein_g": 0.08,
+      "carbohydrates_total_g": 0.45,
+      "fiber_g": 0.03,
+      "sugar_g": 0.01,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/02/46/74/11/1000_F_246741178_cFyflgN2PoxyPVZgHhVpl8RAA7pa7A2a.jpg"
+  },
+  {
+      "name": "Rice",
+      "calories": 1.3,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.03,
+      "protein_g": 0.03,
+      "carbohydrates_total_g": 0.28,
+      "fiber_g": 0.01,
+      "sugar_g": 0.01,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/00/91/51/91/1000_F_91519135_DlbNcDSnqJAbD53UKqkddnFg0LV2gKSj.jpg"
+  },
+  {
+      "name": "Daal",
+      "calories": 1.2,
+      "serving_size": "1 bowl",
+      "fat_total_g": 0.05,
+      "protein_g": 0.08,
+      "carbohydrates_total_g": 0.15,
+      "fiber_g": 0.02,
+      "sugar_g": 0.01,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/07/64/51/43/1000_F_764514366_gM4l2c3IMSSEAr5dftLFnlTnE2aKBRuZ.jpg"
+  },
+  {
+      "name": "Oil",
+      "calories": 9,
+      "serving_size": "1 tsp",
+      "fat_total_g": 1,
+      "protein_g": 0,
+      "carbohydrates_total_g": 0,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/00/78/24/57/1000_F_78245730_nfY5wkER58StHwNZxt5Hh7RDLodNqsYU.jpg"
+  },
+  {
+      "name": "Ghee",
+      "calories": 9,
+      "serving_size": "1 tsp",
+      "fat_total_g": 1,
+      "protein_g": 0,
+      "carbohydrates_total_g": 0,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "image_url": "https://as1.ftcdn.net/v2/jpg/03/02/19/66/1000_F_302196670_yVi9pnG5N915B8O6q5X0PmYjwCFM9Vtx.jpg"
+  },
+  {
+      "name": "Tea",
+      "calories": 0.2,
+      "serving_size": "1 cup",
+      "fat_total_g": 0,
+      "protein_g": 0.01,
+      "carbohydrates_total_g": 0.04,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "image_url": "https://as2.ftcdn.net/v2/jpg/03/04/17/77/1000_F_304177779_7k7ZnPxZPvr4T3rsIsJQrcL08Mwe5BM3.jpg"
+  }
+]

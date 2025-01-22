@@ -1,0 +1,27 @@
+.NewAtApollo_full_body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 4%;
+
+}
+.NewAtApollo_Header{
+    margin-left: 38%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+}
+.NewAtApollo_Card{
+    border-color: rgb(62, 56, 56);
+    border-radius: 5%;
+    overflow: hidden; 
+    height: 400px;
+    
+}
+.NewAtApollo_body{
+    background-color: #e9eff4;
+    flex-wrap: wrap;
+}
+.ApolloHeader{
+    margin-top: 5%;
+}

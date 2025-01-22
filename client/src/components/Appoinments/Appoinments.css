@@ -1,0 +1,114 @@
+.app {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards; /* Fade in effect */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.but {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 12px; /* Slightly more rounded for modern feel */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 160px; /* Slightly wider for better button design */
+  transform: translateX(150%); /* Start position off-screen */
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(150%); /* Start well off-screen */
+  }
+  60% {
+    transform: translateX(-10%); /* Overshoot slightly for a bounce effect */
+  }
+  100% {
+    transform: translateX(0); /* Settle to normal position */
+  }
+}
+
+.but:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.but:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.but:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.but:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.but:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.but:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.but:hover {
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(54, 206, 206, 0.8), rgba(102, 153, 255, 0.8));
+  color: white;
+  transform: translateY(-8px) scale(1.1); /* Slightly increase scale for modern hover effect */
+  transition: transform 0.2s ease-out;
+}
+
+.but img {
+  max-width: 100px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-out;
+}
+
+.but:hover img {
+  transform: scale(1.1); /* Slight scaling effect on image */
+}
+
+.but p {
+  margin: 0;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.but:hover p {
+  color: white; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+  .but {
+    width: 140px;
+    padding: 12px;
+  }
+
+  .but img {
+    max-width: 90px;
+  }
+
+  .but p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,341 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+
+.ViewAppointments-appointment-list {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+h2, h3 {
+  text-align: center;
+  color: #343a40;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.active-appointments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Appointment Item Styling */
+.ViewAppointments-appointment-item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 500px;
+  margin: 10px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+}
+
+/* Hover effect for Appointment Item */
+.ViewAppointments-appointment-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Doctor Information Section */
+.ViewAppointments-appointment-item .doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Doctor Image Styling (Top Right) */
+.ViewAppointments-appointment-item img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Appointment Details Section */
+.ViewAppointments-appointment-details {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+/* Appointment Status */
+.ViewAppointments-appointment-status {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #495057;
+  font-weight: bold;
+}
+
+/* Appointment Action Buttons - Centered Below Status */
+.ViewAppointments-appointment-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  /* flex-direction: column;
+  align-items: center; 
+  gap: 12px; */
+  /* margin-top: 10%;  */
+  /* margin-bottom */
+  /* : 1%; */
+}
+
+/* Appointment Button Styling */
+.appointment-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(to right, #007291, #07394a);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.appointment-button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+}
+
+
+.available-times ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.available-times li {
+  padding: 10px 20px;
+  background: #e9ecef;
+  border-radius: 5px;
+  color: #495057;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.available-times li:hover {
+  background: #ced4da;
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 768px) {
+  .ViewAppointments-appointment-list {
+    padding: 30px;
+  }
+
+  .ViewAppointments-appointment-item {
+    /* flex-direction: row; */
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .ViewAppointments-appointment-details {
+    margin-left: 20px;
+  }
+
+  .available-times ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .appointment-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px;
+}
+
+
+.update-appointment-modal .modal-header {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ddd;
+  padding: 15px;
+}
+
+.update-appointment-modal .modal-title {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.update-appointment-modal .modal-body {
+  padding: 20px;
+}
+
+.update-appointment-modal .form-group {
+  margin-bottom: 15px;
+}
+
+.update-appointment-modal .form-control {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.update-appointment-modal .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+.update-appointment-modal .date-picker {
+  width: 100%;
+}
+
+.update-appointment-modal .time-input {
+  width: 100%;
+}
+
+.update-appointment-modal .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.update-appointment-modal .cancel-btn,
+.update-appointment-modal .save-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.update-appointment-modal .cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.update-appointment-modal .save-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.update-appointment-modal .cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+.update-appointment-modal .save-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Container for the whole appointment list */
+.ViewAppointments-appointment-list {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Sub-title styling */
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+/* Styling for available times section */
+.available-times {
+  margin-bottom: 32px;
+}
+
+/* Times list styling */
+.times-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.times-list .time-item {
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.times-list .time-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* Active appointments styling */
+.active-appointments {
+  background-color: #fafafa;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* List of active appointments */
+.active-appointments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each active appointment item */
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s;
+}
+
+.appointment-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Styling for patient name and appointment time */
+.patient-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.appointment-time {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #777;
+}

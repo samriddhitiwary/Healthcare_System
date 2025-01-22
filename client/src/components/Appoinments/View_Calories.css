@@ -1,0 +1,177 @@
+/* General Styling */
+body {
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calorie-tracker-container {
+    max-width: 800px;
+    margin: 30px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1), -20px -20px 60px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+  }
+  
+  .calorie-tracker-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 30px 30px 80px rgba(0, 0, 0, 0.15), -30px -30px 80px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Title Styling */
+  .calorie-tracker-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4a90e2;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+  }
+  
+  .calorie-tracker-title::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #ff8a00;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Date Picker Container */
+  .date-picker-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .date-picker-container label {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-right: 20px; /* Space between label and input */
+  }
+  
+  .date-picker-container input {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 2px solid #b8c8d9;
+    font-size: 1rem;
+    color: #4a4a4a;
+    outline: none;
+    background: #f9f9f9;
+    width: 60%; /* Adjusting width to make it responsive */
+    transition: all 0.3s ease;
+  }
+  
+  .date-picker-container input:focus {
+    border-color: #ff8a00;
+    box-shadow: 0 0 10px rgba(255, 138, 0, 0.5);
+  }
+  
+  /* Meals Summary */
+  .meals-summary {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* No Meals Message */
+  .no-meals-message {
+    text-align: center;
+    color: #999;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  /* Chart Section */
+  .calorie-chart {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.05), -15px -15px 30px rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .calorie-chart h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4a90e2;
+    margin-bottom: 15px;
+  }
+  
+  /* Button Styling */
+  .button {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff8a00, #ff6f00);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(45deg, #ff6f00, #ff8a00);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .calorie-tracker-container {
+      padding: 25px;
+    }
+  
+    .calorie-tracker-title {
+      font-size: 2.4rem;
+    }
+  
+    .date-picker-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .date-picker-container input {
+      width: 100%;
+    }
+  
+    .calorie-chart h3 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .calorie-tracker-container {
+      padding: 15px;
+    }
+  
+    .calorie-tracker-title {
+      font-size: 2rem;
+    }
+  }

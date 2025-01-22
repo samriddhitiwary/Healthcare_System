@@ -1,0 +1,28 @@
+.ProHealth_inner_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.ProHealth_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.ProHealth_right{
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    /* grid-template-rows: repeat(4, auto); 4 rows  */
+    gap: 10px;
+}
+.ProHealth_main_img{
+    width: 70%;
+    border-radius: 5%;
+}
+.ProHealth_Header{
+    margin-left: 0%;
+}
+.ProHealth_btn{
+    width: 25%;
+    background-color: rgb(22, 72, 74);
+}
