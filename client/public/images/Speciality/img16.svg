@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_64" data-name="Rectangle 64" width="40" height="48" transform="translate(-0.138 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="radiology" transform="translate(-1040 -362)">
+    <rect id="Rectangle_60" data-name="Rectangle 60" width="68" height="68" rx="3" transform="translate(1040 362)" fill="#fff" opacity="0.31"/>
+    <g id="Group_51" data-name="Group 51" transform="translate(1054.263 371.569)">
+      <g id="Group_48" data-name="Group 48" transform="translate(-0.125 0.431)">
+        <g id="Group_47" data-name="Group 47" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <rect id="Rectangle_63" data-name="Rectangle 63" width="38" height="33" transform="translate(0.862 8)" fill="none" stroke="#000" stroke-width="1.6"/>
+        </g>
+      </g>
+      <path id="Path_118" data-name="Path 118" d="M104,148.7V138.066l2.3-2.3h1.5" transform="translate(-94.137 -122.75)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_1" data-name="Line 1" x2="8" transform="translate(15.737 12.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_2" data-name="Line 2" x2="13" transform="translate(13.737 16.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_3" data-name="Line 3" x2="6.252" transform="translate(12.901 22.152)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_4" data-name="Line 4" y2="22" transform="translate(19.737 10.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_5" data-name="Line 5" x2="14" transform="translate(12.737 19.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_6" data-name="Line 6" x2="6.354" transform="translate(20.219 22.152)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_7" data-name="Line 7" y2="12" transform="translate(10.737 27.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_8" data-name="Line 8" y2="12" transform="translate(28.737 27.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <path id="Path_119" data-name="Path 119" d="M275.8,148.7V138.066l-2.3-2.3H272" transform="translate(-246.186 -122.75)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <path id="Path_120" data-name="Path 120" d="M144,350.836v-5.317L145.519,344" transform="translate(-130.34 -311.214)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <path id="Path_121" data-name="Path 121" d="M257.519,350.836v-5.317L256,344" transform="translate(-231.706 -311.214)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_9" data-name="Line 9" x1="4" transform="translate(12.737 25.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <line id="Line_10" data-name="Line 10" x1="4" transform="translate(22.737 25.431)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <path id="Path_122" data-name="Path 122" d="M148.557,312H144v1.519l3.038,3.038.76,2.279h4.557l.76-2.279,3.038-3.038V312H151.6" transform="translate(-130.34 -282.252)" fill="none" stroke="#ed8851" stroke-width="1.6"/>
+      <g id="Group_50" data-name="Group 50" transform="translate(-0.125 0.431)">
+        <g id="Group_49" data-name="Group 49" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <path id="Path_123" data-name="Path 123" d="M156.153,13.317V8H144v5.317" transform="translate(-130.215 -7.547)" fill="none" stroke="#000" stroke-width="1.6"/>
+          <path id="Path_124" data-name="Path 124" d="M156.153,440v6.077H144V440" transform="translate(-130.215 -398.53)" fill="none" stroke="#000" stroke-width="1.6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

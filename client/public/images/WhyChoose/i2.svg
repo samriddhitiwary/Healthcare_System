@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
+  <defs>
+    <clipPath id="clip-_02-Counters-Clinics">
+      <rect width="68" height="68"/>
+    </clipPath>
+  </defs>
+  <g id="_02-Counters-Clinics" data-name="02-Counters-Clinics" clip-path="url(#clip-_02-Counters-Clinics)">
+    <g id="Group_11339" data-name="Group 11339" transform="translate(-2.248 0.663)">
+      <g id="Group_11336" data-name="Group 11336" transform="translate(5.248 8.337)">
+        <g id="Group_11333" data-name="Group 11333" transform="translate(0 50.075)">
+          <g id="Group_11338" data-name="Group 11338">
+            <line id="Line_27" data-name="Line 27" x1="61.962" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.4"/>
+          </g>
+        </g>
+        <rect id="Rectangle_49" data-name="Rectangle 49" width="5.201" height="4.94" transform="translate(6.816 30.512)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_50" data-name="Rectangle 50" width="5.201" height="4.939" transform="translate(6.816 36.844)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_51" data-name="Rectangle 51" width="5.203" height="4.939" transform="translate(19.882 36.844)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_52" data-name="Rectangle 52" width="5.201" height="4.94" transform="translate(6.816 24.496)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_53" data-name="Rectangle 53" width="5.203" height="4.94" transform="translate(19.882 30.512)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_54" data-name="Rectangle 54" width="5.201" height="4.94" transform="translate(13.349 30.512)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_55" data-name="Rectangle 55" width="5.203" height="4.94" transform="translate(19.882 24.496)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_56" data-name="Rectangle 56" width="5.201" height="4.939" transform="translate(13.349 36.844)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <rect id="Rectangle_57" data-name="Rectangle 57" width="5.201" height="4.94" transform="translate(13.349 24.496)" fill="none" stroke="#ec8046" stroke-miterlimit="10" stroke-width="1.4"/>
+        <g id="Group_11335" data-name="Group 11335" transform="translate(2.632)">
+          <g id="Group_11337" data-name="Group 11337">
+            <path id="Path_5877" data-name="Path 5877" d="M44.825.771l-.1-.09L29.068,15.2l-.156.143v4.919H5.318V47.17h32.71V36.081a6.719,6.719,0,0,1,13.437,0V47.17h9.079V15.344Z" transform="translate(-5.318 -0.681)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.4"/>
+            <path id="Path_5878" data-name="Path 5878" d="M71.508,34.661h3.634V31.509h3.131V27.873H75.142V24.722H71.508v3.151H68.334v3.636h3.174Z" transform="translate(-33.915 -11.591)" fill="none" stroke="#ec8046" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.4"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

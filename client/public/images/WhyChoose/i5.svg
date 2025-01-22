@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
+  <defs>
+    <clipPath id="clip-_05-Pin_codes_Served">
+      <rect width="68" height="68"/>
+    </clipPath>
+  </defs>
+  <g id="_05-Pin_codes_Served" data-name="05-Pin codes Served" clip-path="url(#clip-_05-Pin_codes_Served)">
+    <g id="Group_11342" data-name="Group 11342" transform="translate(5.5 6.5)">
+      <g id="Group_11343" data-name="Group 11343">
+        <path id="Path_5882" data-name="Path 5882" d="M57.5,55.053c0,.062-.008,1.124-.019,1.186L44.742,43.5l5.344-4.344L57.36,54.432A1.449,1.449,0,0,1,57.5,55.053ZM54.914,56.5H52.086l-6.879-6.879a1,1,0,0,0-1.414,0L36.914,56.5H34.086m.534-15.466c.442-.474,1.892-1.966,2.347-2.481l2.826,2.826a1,1,0,0,0,1.414,0l6.018-6.019c.07.088.245-.958.3-.86l2.562,4.656m-31.053-1.6c.455.515,2.9,3.007,3.347,3.481M56.914,56.5H20.086L6.246,42.66l1.912-3.916M16.742,47.5l6.018-6.018c2.722,2.784,4.85,4.578,5.1,4.786a1,1,0,0,0,1.28,0c.25-.208,2.378-2,5.1-4.786L40.258,47.5l-9,9H25.742Zm20.532-9.468c.679-.81,2.357-2.654,3.022-3.532h6.962M28.5-1.5a17.018,17.018,0,0,1,17,17c0,11.017-13.832,23.876-17,26.677-3.17-2.8-17-15.653-17-26.677A17.018,17.018,0,0,1,28.5-1.5ZM9.588,35.64a2.009,2.009,0,0,1,1.806-1.14H16.7c.665.878,1.343,1.722,2.022,2.532L12.5,43.258l-4.43-4.43ZM21.258,56.5H1.947A1.446,1.446,0,0,1,.641,54.431L6.333,42.576" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+        <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(18 5)" fill="#fff" stroke="#ec8046" stroke-width="1.4">
+          <circle cx="10" cy="10" r="10" stroke="none"/>
+          <circle cx="10" cy="10" r="9.3" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
