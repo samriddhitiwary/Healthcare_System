@@ -15,7 +15,7 @@ const center = { lat: 48.8584, lng: 2.2945 };
 const FindHospital = () => {
   const loaderOptions = useMemo(
     () => ({
-      googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+      googleMapsApiKey: "AIzaSyBqtiPa0XEwOdZebUP6V2wV45PjLEbpXHg",
       libraries: ['places'],
     }),
     []
