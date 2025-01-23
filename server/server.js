@@ -8,6 +8,9 @@ import getValueforBPRouter from "./routes/BloodPressure.js";
 import getValueforSugarLevelRouter from "./routes/SugarLevelRoute.js";
 import getValueforWeightRouter from "./routes/WeightRouter.js";
 import getPDFrouter from "./routes/PdfRoute.js";
+import * as scheduler from "node-cron"; 
+import { sendEmail } from "./email/smtp.js";
+import { getTomorrrowAppointment } from "./controllers/AppointmentController.js";
 
 
 const app = express();
@@ -38,3 +41,9 @@ app.use("/api/healthrecord",getValueforBPRouter);
 app.use("/api/healthrecord",getValueforSugarLevelRouter);
 app.use("/api/healthrecord",getValueforWeightRouter);
 app.use("/api/pdfdetails", getPDFrouter);
+
+scheduler.schedule("45 01 * * *", async () => {
+ 
+  // console.log(await sendEmail());
+  await sendEmail();
+});

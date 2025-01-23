@@ -1,3 +1,4 @@
+import { convertDate } from "../middleware/dateUtil.js";
 import Appointment from "../models/AppointmentModel.js";
 
 
@@ -95,3 +96,33 @@ export const getAllAppointmentsOfOnePatient = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+
+export const getTomorrrowAppointment = async () => {
+    try {
+        let start_date = new Date();
+        start_date =  new Date(start_date.setDate(start_date.getDate() + 1));
+        start_date = convertDate(start_date.toISOString());
+        console.log(start_date);
+
+        let end_date = new Date();
+        end_date =  new Date(end_date.setDate(end_date.getDate() + 2));
+        end_date = convertDate(end_date.toISOString());
+        console.log(end_date);
+
+        const appointments = await Appointment.find({
+            date: {
+                $gt: new Date(start_date),
+                $lt: new Date(end_date)
+
+            //   $gt: new Date("2025-01-16T00:00:00.000Z"),
+            //   $lt: new Date("2025-01-17T00:00:00.000Z")
+            }
+          })
+
+          return appointments;
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
