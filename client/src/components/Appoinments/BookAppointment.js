@@ -114,7 +114,7 @@ const BookAppointment = () => {
       toast.error("Please select a doctor, date, and time.");
       return;
     }
-
+  
     try {
       const appointmentData = {
         patientId: JSON.parse(sessionStorage.getItem("userdata"))._id,
@@ -123,7 +123,7 @@ const BookAppointment = () => {
         time: selectedTime,
         status: "confirmed",
       };
-
+  
       const response = await fetch(
         "http://localhost:8000/api/appointment/scheduleApointment",
         {
@@ -134,7 +134,7 @@ const BookAppointment = () => {
           body: JSON.stringify(appointmentData),
         }
       );
-
+  
       if (response.ok) {
         const result = await response.json();
         toast.success(result.msg || "Appointment scheduled successfully!");
@@ -148,6 +148,7 @@ const BookAppointment = () => {
       toast.error("An error occurred while scheduling the appointment.");
     }
   };
+  
 
   return (
     <>

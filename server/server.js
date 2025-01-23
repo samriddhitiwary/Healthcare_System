@@ -1,3 +1,4 @@
+// server.js
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
@@ -10,10 +11,11 @@ import getValueforBPRouter from "./routes/BloodPressure.js";
 import getValueforSugarLevelRouter from "./routes/SugarLevelRoute.js";
 import getValueforWeightRouter from "./routes/WeightRouter.js";
 import getPDFrouter from "./routes/PdfRoute.js";
-// import meals from "./routes/NutrientsRoute.js";
 import * as scheduler from "node-cron"; 
-import { sendEmail } from "./email/smtp.js";
-
+import sendEmail from "./email/smtp.js"; 
+import Appointment from "./models/AppointmentModel.js"; // Corrected model import
+import User from "./models/ProfileModel.js"; // Corrected model import
+import DoctorModel from "./models/DoctorModel.js";
 const app = express();
 dotenv.config();
 
@@ -43,13 +45,37 @@ app.use("/api/healthrecord", getValueforBPRouter);
 app.use("/api/healthrecord", getValueforSugarLevelRouter);
 app.use("/api/healthrecord", getValueforWeightRouter);
 app.use("/api/pdfdetails", getPDFrouter);
-// app.use("/api/nutrients", meals);
 
-// Scheduler to send email reminders at 08:55 AM every day
-scheduler.schedule("34 09 * * *", async () => {
+scheduler.schedule("12 10 * * *", async () => { // Runs every day at 10:02 AM
   try {
-    const result = await sendEmail();
-    console.log("Email reminder sent successfully:", result);
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+
+    const dayAfter = new Date(tomorrow);
+    dayAfter.setDate(dayAfter.getDate() + 1);
+
+    // Find appointments scheduled for tomorrow
+    const appointments = await Appointment.find({
+      date: { $gte: tomorrow, $lt: dayAfter },
+    });
+
+    for (const appointment of appointments) {
+      const user = await User.findById(appointment.patientId);
+      const doctor = await DoctorModel.findById(appointment.doctorId);
+      if (user) {
+        const mailOptions = {
+          from: "pankajtiwary74@gmail.com",
+          to: user.email,
+          subject: "Appointment Reminder",
+          text: `Dear ${user.fname},\n\nThis is a reminder for your appointment with Dr. ${doctor.fname} ${doctor.lname} tomorrow at ${doctor.date}.\n\nThank you!`,
+        };
+
+        // Send email reminder
+        await sendEmail(mailOptions);
+        console.log("Email sent successfully for appointment with:", appointment.patientId);
+      }
+    }
   } catch (error) {
     console.error("Error while sending email reminders:", error);
   }
