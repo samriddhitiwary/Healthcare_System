@@ -50,7 +50,7 @@ app.use("/api/pdfdetails", getPDFrouter);
 app.use("/api/nutrients",meals);
 
 
-scheduler.schedule("29 11 * * *", async () => { 
+scheduler.schedule("10 2 * * *", async () => { 
   try {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -78,7 +78,7 @@ scheduler.schedule("29 11 * * *", async () => {
                 <div style="background-color: #f4f4f4; padding: 20px; text-align: center; border-radius: 10px; width: 80%; margin: 0 auto;">
                   <h2 style="color: #4CAF50;">Reminder: Your Appointment is Tomorrow!</h2>
                   <p>Dear ${user.fname},</p>
-                  <p>This is a friendly reminder that you have an appointment with Dr. ${doctor.fname} ${doctor.lname} tomorrow</strong>.</p>
+                  <p>This is a friendly reminder that you have an appointment with ${doctor.fname} ${doctor.lname} tomorrow</strong>.</p>
                   <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                     <h3 style="color: #4CAF50;">Appointment Details:</h3>
                     <p><strong>Doctor:</strong> Dr. ${doctor.fname} ${doctor.lname}</p>
