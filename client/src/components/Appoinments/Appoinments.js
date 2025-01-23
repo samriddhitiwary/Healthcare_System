@@ -35,7 +35,7 @@ const Appointments = () => {
       onClick={() => navigate("/cal-calories")}
       >
         <img src="images/Appointments/img4.svg" alt="Buy Medicine" />
-        <p>Culnary</p>
+        <p>Calories</p>
       </Button>
 
       <Button

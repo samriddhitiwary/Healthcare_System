@@ -13,9 +13,11 @@ import getValueforWeightRouter from "./routes/WeightRouter.js";
 import getPDFrouter from "./routes/PdfRoute.js";
 import * as scheduler from "node-cron"; 
 import sendEmail from "./email/smtp.js"; 
-import Appointment from "./models/AppointmentModel.js"; // Corrected model import
-import User from "./models/ProfileModel.js"; // Corrected model import
+import Appointment from "./models/AppointmentModel.js"; 
+import User from "./models/ProfileModel.js"; 
 import DoctorModel from "./models/DoctorModel.js";
+import meals from "./routes/NutrientsRoute.js";
+
 const app = express();
 dotenv.config();
 
@@ -45,9 +47,10 @@ app.use("/api/healthrecord", getValueforBPRouter);
 app.use("/api/healthrecord", getValueforSugarLevelRouter);
 app.use("/api/healthrecord", getValueforWeightRouter);
 app.use("/api/pdfdetails", getPDFrouter);
+app.use("/api/nutrients",meals);
 
 
-scheduler.schedule("49 10 * * *", async () => { 
+scheduler.schedule("29 11 * * *", async () => { 
   try {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
