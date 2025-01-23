@@ -46,7 +46,8 @@ app.use("/api/healthrecord", getValueforSugarLevelRouter);
 app.use("/api/healthrecord", getValueforWeightRouter);
 app.use("/api/pdfdetails", getPDFrouter);
 
-scheduler.schedule("12 10 * * *", async () => { // Runs every day at 10:02 AM
+
+scheduler.schedule("49 10 * * *", async () => { 
   try {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -55,7 +56,7 @@ scheduler.schedule("12 10 * * *", async () => { // Runs every day at 10:02 AM
     const dayAfter = new Date(tomorrow);
     dayAfter.setDate(dayAfter.getDate() + 1);
 
-    // Find appointments scheduled for tomorrow
+    
     const appointments = await Appointment.find({
       date: { $gte: tomorrow, $lt: dayAfter },
     });
@@ -68,7 +69,26 @@ scheduler.schedule("12 10 * * *", async () => { // Runs every day at 10:02 AM
           from: "pankajtiwary74@gmail.com",
           to: user.email,
           subject: "Appointment Reminder",
-          text: `Dear ${user.fname},\n\nThis is a reminder for your appointment with Dr. ${doctor.fname} ${doctor.lname} tomorrow at ${doctor.date}.\n\nThank you!`,
+          html: `
+            <html>
+              <body style="font-family: Arial, sans-serif; color: #333;">
+                <div style="background-color: #f4f4f4; padding: 20px; text-align: center; border-radius: 10px; width: 80%; margin: 0 auto;">
+                  <h2 style="color: #4CAF50;">Reminder: Your Appointment is Tomorrow!</h2>
+                  <p>Dear ${user.fname},</p>
+                  <p>This is a friendly reminder that you have an appointment with Dr. ${doctor.fname} ${doctor.lname} tomorrow</strong>.</p>
+                  <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                    <h3 style="color: #4CAF50;">Appointment Details:</h3>
+                    <p><strong>Doctor:</strong> Dr. ${doctor.fname} ${doctor.lname}</p>
+                    <p><strong>Date:</strong> ${appointment.date.toLocaleDateString()}</p>
+                   
+                  </div>
+                  <p style="margin-top: 20px;">We look forward to seeing you!</p>
+                  <p style="font-size: 0.9em; color: #777;">If you have any questions, feel free to reach out.</p>
+                  <p style="font-size: 0.8em; color: #999;">Thank you for choosing our services.</p>
+                </div>
+              </body>
+            </html>
+          `,
         };
 
         // Send email reminder
