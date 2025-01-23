@@ -42,7 +42,7 @@ app.use("/api/healthrecord",getValueforSugarLevelRouter);
 app.use("/api/healthrecord",getValueforWeightRouter);
 app.use("/api/pdfdetails", getPDFrouter);
 
-scheduler.schedule("45 01 * * *", async () => {
+scheduler.schedule("55 08 * * *", async () => {
  
   // console.log(await sendEmail());
   await sendEmail();
