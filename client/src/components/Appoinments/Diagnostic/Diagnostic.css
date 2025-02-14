@@ -1,129 +1,111 @@
-/* General Container Styling */
+/* Diagnostic.css */
+
+/* Container */
 .diagnostic-container {
-  padding: 25px;
-  max-width: auto;
+  max-width: 800px;
   margin: auto;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.diagnostic-header {
+  font-size: 22px;
+  font-weight: bold;
   text-align: center;
-  transition: all 0.3s ease-in-out;
-}
-
-.diagnostic-container:hover {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Title Styling */
-.diagnostic-title {
-  font-size: 2rem;
-  font-weight: 700;
+  color: #333;
   margin-bottom: 20px;
-  color: #222;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-/* File Input Styling */
-.file-input {
-  display: block;
-  margin: 15px auto;
-  padding: 12px;
-  border: 2px dashed #007bff;
-  border-radius: 8px;
-  width: 100%;
-  background: #f8f9fa;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+/* File Upload */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.file-input:hover {
-  background: #e9f5ff;
-  border-color: #0056b3;
+.upload-input {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* Upload Button */
+/* Button */
 .upload-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
   background: linear-gradient(45deg, #007bff, #0056b3);
   color: white;
-  padding: 14px 22px;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem;
-  text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .upload-button:hover {
-  background: linear-gradient(45deg, #0056b3, #004494);
   transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Loader Animation */
-.loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #007bff;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 0.8s linear infinite;
-  margin: 25px auto;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Loader */
+.loading-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff5722;
+  margin-top: 10px;
 }
 
 /* Analysis Container */
 .analysis-container {
-  margin-top: 25px;
-  padding: 20px;
-  background: #ffffff;
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
-  text-align: left;
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.analysis-container:hover {
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.18);
-}
-
-/* Analysis Title */
-.analysis-title {
-  font-size: 1.4rem;
+/* Sections */
+.section-title {
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 12px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.section-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section-list li {
+  background: #e3f2fd;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
   color: #333;
 }
 
-/* Analysis Data */
-.analysis-data {
-  background: #f0f5ff;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 1rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  max-height: 300px;
-  overflow-y: auto;
-  border-left: 4px solid #007bff;
-}
-
-/* Chart Container */
+/* Chart */
 .chart-container {
-  margin-top: 20px;
-  background: #fff;
-  padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff3cd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.chart-container:hover {
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+/* YouTube Links */
+.youtube-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.youtube-links a:hover {
+  text-decoration: underline;
 }
