@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Tesseract from "tesseract.js";
 import OpenAI from "openai";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
-import "./Diagnostic.css";
-
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
+import { AlertTriangle, HeartPulse, Activity, Dumbbell } from "lucide-react";
+import { Tilt } from "react-tilt";
 
 const openai = new OpenAI({
   apiKey: process.env.REACT_APP_CHATBOT_KEY,
@@ -26,8 +26,6 @@ const Diagnostic = () => {
       });
 
       const extractedText = data.text.trim();
-      // console.log("Extracted Text:", extractedText);
-
       if (!extractedText || extractedText.length < 10) {
         throw new Error("Text extraction failed or too short.");
       }
@@ -44,7 +42,7 @@ const Diagnostic = () => {
       const response = await openai.chat.completions.create({
         model: "gpt-4o",
         messages: [
-          { role: "system", content: "You are an AI that provides a highly detailed analysis of blood reports, including severity levels, causes, future disease predictions, remedies, exercises, and YouTube video recommendations. Always return a valid JSON response." },
+          { role: "system", content: "You are an AI that provides a highly detailed analysis of blood reports, including severity levels, causes, future disease predictions, remedies, exercises, and YouTube video recommendations. Always return a valid JSON response.Give atleast 5 points for every report" },
           {
             role: "user",
             content: `Analyze the following blood report with deep insights:
@@ -96,17 +94,17 @@ const Diagnostic = () => {
           },
         ],
       });
-  
+
       const jsonString = response.choices[0].message.content.trim();
       const cleanedJsonString = jsonString.replace(/^```json/, "").replace(/```$/, "").trim();
-  
+
       return JSON.parse(cleanedJsonString);
     } catch (error) {
       console.error("AI analysis error:", error);
       return { error: "Failed to process the report. Please try again." };
     }
   };
-  
+
   const handleUpload = async () => {
     if (!file) return alert("Please upload an image of the report.");
 
@@ -130,97 +128,126 @@ const Diagnostic = () => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold">Upload Blood Report Image</h2>
-      <input type="file" accept="image/*" onChange={handleFileChange} className="mt-2" />
-      <button onClick={handleUpload} className="bg-blue-500 text-white px-4 py-2 mt-2">
-        {loading ? "Analyzing..." : "Upload & Analyze"}
-      </button>
+    <div className="max-w-6xl mx-auto p-6 bg-gradient-to-r from-blue-50 to-gray-100 shadow-lg rounded-lg">
+      <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">Upload Blood Report</h2>
+
+      <div className="flex flex-col items-center">
+        <input type="file" accept="image/*" onChange={handleFileChange} className="border border-gray-300 p-2 rounded-md w-full" />
+        <button onClick={handleUpload} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 mt-3 rounded-lg transition duration-200">
+          {loading ? "Analyzing..." : "Upload & Analyze"}
+        </button>
+      </div>
 
       {analysis && (
-        <div className="mt-4 p-4 bg-gray-100">
-          <h3 className="text-lg font-semibold">Analysis Report</h3>
-          
-          {analysis.abnormal_levels && (
-            <div>
-              <h4 className="font-semibold">Abnormal Levels</h4>
-              <ul>
-                {analysis.abnormal_levels.map((item, index) => (
-                  <li key={index}>{item.test}: {item.value} (Normal: {item.normal_range}) - {item.severity}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          
-          {analysis.possible_conditions && (
-            <div>
-              <h4 className="font-semibold">Possible Conditions</h4>
-              <ul>
-                {analysis.possible_conditions.map((cond, index) => (
-                  <li key={index}>{cond.condition}: {cond.explanation}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+        <div className="mt-6 space-y-6">
+          {/* Cards Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Abnormal Levels */}
+            <Tilt options={{ max: 25, scale: 1.05, speed: 1000 }}>
+              <div className="p-6 bg-gradient-to-r from-red-100 to-red-300 border-l-4 border-red-500 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <div className="flex items-center gap-3">
+                  <AlertTriangle className="text-red-600 w-6 h-6" />
+                  <h4 className="text-lg font-semibold text-red-700">Abnormal Levels</h4>
+                </div>
+                <ul className="mt-3 text-gray-800">
+                  {analysis.abnormal_levels.map((item, index) => (
+                    <li key={index} className="mb-2">
+                      <span className="font-medium">{item.test}:</span> {item.value} <span className="text-gray-600"> (Normal: {item.normal_range})</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Tilt>
 
-          {analysis.danger_graph && (
-            <div>
-              <h4 className="font-semibold">Danger Levels</h4>
-              <ResponsiveContainer width="100%" height={300}>
+            {/* Future Risks */}
+            <Tilt options={{ max: 25, scale: 1.05, speed: 1000 }}>
+              <div className="p-6 bg-gradient-to-r from-yellow-100 to-yellow-300 border-l-4 border-yellow-500 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <div className="flex items-center gap-3">
+                  <HeartPulse className="text-yellow-600 w-6 h-6" />
+                  <h4 className="text-lg font-semibold text-yellow-700">Future Risks</h4>
+                </div>
+                <ul className="mt-3 text-gray-800">
+                  {analysis.future_risks.map((risk, index) => (
+                    <li key={index} className="mb-2">{risk}</li>
+                  ))}
+                </ul>
+              </div>
+            </Tilt>
+
+            {/* Recommended Remedies */}
+            <Tilt options={{ max: 25, scale: 1.05, speed: 1000 }}>
+              <div className="p-6 bg-gradient-to-r from-green-100 to-green-300 border-l-4 border-green-500 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <div className="flex items-center gap-3">
+                  <Activity className="text-green-600 w-6 h-6" />
+                  <h4 className="text-lg font-semibold text-green-700">Recommended Remedies</h4>
+                </div>
+                <ul className="mt-3 text-gray-800">
+                  {analysis.recommended_remedies.map((remedy, index) => (
+                    <li key={index} className="mb-2">{remedy}</li>
+                  ))}
+                </ul>
+              </div>
+            </Tilt>
+
+            {/* Exercises */}
+            <Tilt options={{ max: 25, scale: 1.05, speed: 1000 }}>
+              <div className="p-6 bg-gradient-to-r from-purple-100 to-purple-300 border-l-4 border-purple-500 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <div className="flex items-center gap-3">
+                  <Dumbbell className="text-purple-600 w-6 h-6" />
+                  <h4 className="text-lg font-semibold text-purple-700">Recommended Exercises</h4>
+                </div>
+                <ul className="mt-3 text-gray-800">
+                  {analysis.exercises.map((exercise, index) => (
+                    <li key={index} className="mb-2">{exercise}</li>
+                  ))}
+                </ul>
+              </div>
+            </Tilt>
+          </div>
+
+          {/* Graphs Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Bar Chart */}
+            <div className="p-6 bg-white rounded-lg shadow-lg">
+              <h4 className="text-lg font-semibold text-red-500 mb-3">Risk Analysis</h4>
+              <ResponsiveContainer width="100%" height={200}>
                 <BarChart data={analysis.danger_graph}>
                   <XAxis dataKey="condition" />
                   <YAxis />
                   <Tooltip />
-                  <Legend />
-                  <Bar dataKey="intensity" fill="#FF0000" name="Danger Level" />
+                  <Bar dataKey="intensity" fill="#FF4C4C" name="Danger Level" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
-          )}
-          
-          {analysis.future_risks && (
-            <div>
-              <h4 className="font-semibold">Future Risks</h4>
-              <ul>
-                {analysis.future_risks.map((risk, index) => (
-                  <li key={index}>{risk}</li>
-                ))}
-              </ul>
+
+            {/* Pie Chart */}
+            <div className="p-6 bg-white rounded-lg shadow-lg">
+              <h4 className="text-lg font-semibold text-blue-500 mb-3">Condition Severity</h4>
+              <ResponsiveContainer width="100%" height={200}>
+                <PieChart>
+                  <Pie data={analysis.danger_graph} dataKey="intensity" nameKey="condition" cx="50%" cy="50%" outerRadius={50} fill="#FFAA00">
+                    <Cell fill="#FF4C4C" />
+                    <Cell fill="#FFA500" />
+                    <Cell fill="#FFD700" />
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
             </div>
-          )}
-          
-          {analysis.recommended_remedies && (
-            <div>
-              <h4 className="font-semibold">Recommended Remedies</h4>
-              <ul>
-                {analysis.recommended_remedies.map((remedy, index) => (
-                  <li key={index}>{remedy}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          
-          {analysis.exercises && (
-            <div>
-              <h4 className="font-semibold">Recommended Exercises</h4>
-              <ul>
-                {analysis.exercises.map((exercise, index) => (
-                  <li key={index}>{exercise}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          
-          {analysis.youtube_links && (
-            <div>
-              <h4 className="font-semibold">YouTube Recommendations</h4>
-              <ul>
-                {analysis.youtube_links.map((link, index) => (
-                  <li key={index}><a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a></li>
-                ))}
-              </ul>
-            </div>
-          )}
+          </div>
+
+          {/* Biggest Graph at Bottom */}
+          <div className="p-6 bg-white rounded-lg shadow-lg">
+            <h4 className="text-lg font-semibold text-green-500 mb-3">Health Trends</h4>
+            <ResponsiveContainer width="100%" height={400}>
+              <LineChart data={analysis.danger_graph}>
+                <XAxis dataKey="condition" />
+                <YAxis />
+                <Tooltip />
+                <Line type="monotone" dataKey="intensity" stroke="#32CD32" />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       )}
     </div>
@@ -228,4 +255,3 @@ const Diagnostic = () => {
 };
 
 export default Diagnostic;
-  
